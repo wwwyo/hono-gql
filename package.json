@@ -1,0 +1,21 @@
+{
+  "name": "hono-gql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230404.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.0",
+    "wrangler": "^2.14.0"
+  },
+  "volta": {
+    "node": "18.15.0"
+  }
+}
