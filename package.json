@@ -17,5 +17,8 @@
   },
   "volta": {
     "node": "18.15.0"
+  },
+  "dependencies": {
+    "hono": "^3.1.5"
   }
 }
