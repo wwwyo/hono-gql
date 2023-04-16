@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler publish --minify src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +21,8 @@
     "node": "18.15.0"
   },
   "dependencies": {
+    "@hono/graphql-server": "^0.4.0",
+    "graphql": "^16.6.0",
     "hono": "^3.1.5"
   }
 }

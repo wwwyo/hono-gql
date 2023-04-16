@@ -1,3 +1,6 @@
 name = "hono-gql"
 main = "src/index.ts"
 compatibility_date = "2023-04-10"
+
+[site]
+bucket = "./assets"
