@@ -6,16 +6,20 @@
   "scripts": {
     "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler publish --minify src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230404.0",
+    "@graphql-codegen/cli": "3.3.0",
+    "@graphql-codegen/typescript": "3.0.3",
     "typescript": "^5.0.4",
     "vitest": "^0.30.0",
-    "wrangler": "^2.14.0"
+    "wrangler": "^2.14.0",
+    "@graphql-codegen/typescript-resolvers": "3.2.0"
   },
   "volta": {
     "node": "18.15.0"
