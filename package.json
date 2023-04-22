@@ -16,10 +16,11 @@
     "@cloudflare/workers-types": "^4.20230404.0",
     "@graphql-codegen/cli": "3.3.0",
     "@graphql-codegen/typescript": "3.0.3",
+    "@graphql-codegen/typescript-operations": "^3.0.3",
+    "@graphql-codegen/typescript-resolvers": "3.2.0",
     "typescript": "^5.0.4",
     "vitest": "^0.30.0",
-    "wrangler": "^2.14.0",
-    "@graphql-codegen/typescript-resolvers": "3.2.0"
+    "wrangler": "^2.14.0"
   },
   "volta": {
     "node": "18.15.0"

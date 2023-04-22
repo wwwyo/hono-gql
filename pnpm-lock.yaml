@@ -16,11 +16,17 @@ devDependencies:
     specifier: ^4.20230404.0
     version: 4.20230404.0
   '@graphql-codegen/cli':
-    specifier: ^3.3.0
+    specifier: 3.3.0
     version: 3.3.0(@babel/core@7.21.4)(graphql@16.6.0)
   '@graphql-codegen/typescript':
+    specifier: 3.0.3
+    version: 3.0.3(graphql@16.6.0)
+  '@graphql-codegen/typescript-operations':
     specifier: ^3.0.3
     version: 3.0.3(graphql@16.6.0)
+  '@graphql-codegen/typescript-resolvers':
+    specifier: 3.2.0
+    version: 3.2.0(graphql@16.6.0)
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -1160,6 +1166,39 @@ packages:
       '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
       graphql: 16.6.0
       tslib: 2.5.0
+    dev: true
+
+  /@graphql-codegen/typescript-operations@3.0.3(graphql@16.6.0):
+    resolution: {integrity: sha512-RtMRFpZ8nyXxwurdxklWVIHX9U6/fGWYWEpvarNIIci17BKajZPzdBPKP2GKhUEWzZVGNESqH3RX38jt0onLqQ==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-codegen/plugin-helpers': 4.2.0(graphql@16.6.0)
+      '@graphql-codegen/typescript': 3.0.3(graphql@16.6.0)
+      '@graphql-codegen/visitor-plugin-common': 3.1.0(graphql@16.6.0)
+      auto-bind: 4.0.0
+      graphql: 16.6.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@graphql-codegen/typescript-resolvers@3.2.0(graphql@16.6.0):
+    resolution: {integrity: sha512-119zDHVb/DYuPW76VYRwYAVRFABHpMN0OZgXe/g2PIHlb/Vlfof4TLjrKkRM7iBFbZPWGL92jqiI8hWFHhpqdg==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-codegen/plugin-helpers': 4.2.0(graphql@16.6.0)
+      '@graphql-codegen/typescript': 3.0.3(graphql@16.6.0)
+      '@graphql-codegen/visitor-plugin-common': 3.1.0(graphql@16.6.0)
+      '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
+      auto-bind: 4.0.0
+      graphql: 16.6.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
     dev: true
 
   /@graphql-codegen/typescript@3.0.3(graphql@16.6.0):
