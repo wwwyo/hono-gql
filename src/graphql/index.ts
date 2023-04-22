@@ -1,6 +1,7 @@
 import { RootResolver } from '@hono/graphql-server'
 import { buildSchema } from 'graphql'
 import { qiitaResolver } from './resolver/qiitaResolver'
+import { Query } from './codegen/resolver'
 
 export const schema = buildSchema(`
   type Query {

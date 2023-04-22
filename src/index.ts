@@ -1,7 +1,6 @@
 import { graphqlServer } from '@hono/graphql-server'
 import { Hono } from 'hono'
 import { schema, rootResolver } from './graphql/index'
-import { getQiitaItems } from './graphql/resolver/qiitaResolver'
 
 export interface Env {
   // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
@@ -29,11 +28,6 @@ app.get('/test', async (c) => {
   )
   const body = JSON.stringify(await res.json())
   return c.text(body)
-})
-
-app.get('/qiita', async (c) => {
-  const res = await getQiitaItems({ userId: 'www_y118', page: 1, perPage: 20 })
-  return c.json(res)
 })
 
 app.use(
