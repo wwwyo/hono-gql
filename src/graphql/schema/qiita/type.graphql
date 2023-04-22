@@ -1,0 +1,49 @@
+type Query {
+  qiitaItems: [QiitaItem]
+}
+
+type QiitaItem {
+  rendered_body: String
+  body: String
+  coediting: Boolean
+  comments_count: Int
+  created_at: String
+  group: String
+  id: String
+  likes_count: Int
+  private: Boolean
+  reactions_count: Int
+  stocks_count: Int
+  tags: [QiitaTag]
+  title: String
+  updated_at: String
+  url: String
+  user: QiitaUser
+  page_views_count: Int
+  team_membership: String
+  organization_url_name: String
+}
+
+type QiitaTag {
+  name: String
+  versions: [String]
+}
+
+type QiitaUser {
+  description: String
+  facebook_id: String
+  followees_count: Int
+  followers_count: Int
+  github_login_name: String
+  id: String
+  items_count: Int
+  linkedin_id: String
+  location: String
+  name: String
+  organization: String
+  permanent_id: Int
+  profile_image_url: String
+  team_only: Boolean
+  twitter_screen_name: String
+  website_url: String
+}
