@@ -1,30 +1,11 @@
-import type { QiitaItem, QueryResolvers } from '../codegen/resolver'
+import type { QiitaItem, QueryResolvers } from '@graphql/codegen/resolver'
+import { type SearchParams, getAllItems } from './qiitaClient'
 
-export type Props = {
-  userId: string
-  perPage?: number
-  page?: number
-  query?: string
-}
-
-const getUrl = ({ userId, page, perPage, query }: Props) =>
-  `https://qiita.com/api/v2/users/${userId}/items?per_page=${perPage}&page=${page}&${query}`
-
-export const getQiitaItems = async ({
-  userId,
-  perPage = 20,
-  page = 1,
-  query,
-}: Props) => {
+const getQiitaItems = async (params: SearchParams): Promise<QiitaItem[]> => {
   try {
-    const res = await fetch(getUrl({ userId, perPage, page, query }))
-    if (!res.ok) {
-      throw new Error('res not ok')
-    }
-
-    return res.json() as Promise<QiitaItem[]>
+    return getAllItems(params)
   } catch (e) {
-    console.error(e)
+    console.error('failed to fetch qiita\n', e)
     throw new Error('failed to fetch qiita')
   }
 }
@@ -32,3 +13,4 @@ export const getQiitaItems = async ({
 export const qiitaResolver: QueryResolvers = {
   qiitaItems: () => getQiitaItems({ userId: 'www_y118' }),
 }
+gi

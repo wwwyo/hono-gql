@@ -58,57 +58,58 @@ export const schema = buildSchema(`
 
 export const rootResolver: RootResolver = (ctx) => {
   return {
-    qiitaItems: () => {
-      return [
-        {
-          rendered_body: '',
-          body: '',
-          coediting: false,
-          comments_count: 0,
-          created_at: '2022-03-04T12:41:28+09:00',
-          group: null,
-          id: 'faafd093ac7e9bf0d510',
-          likes_count: 6,
-          private: false,
-          reactions_count: 0,
-          stocks_count: 6,
-          tags: [
-            {
-              name: 'Git',
-              versions: [],
-            },
-            {
-              name: 'GitHub',
-              versions: [],
-            },
-          ],
-          title: 'コミットのお作法',
-          updated_at: '2022-05-24T22:41:33+09:00',
-          url: 'https://qiita.com/www_y118/items/faafd093ac7e9bf0d510',
-          user: {
-            description: '感覚でやってます。\r\n',
-            facebook_id: '',
-            followees_count: 3,
-            followers_count: 3,
-            github_login_name: 'yuito118',
-            id: 'www_y118',
-            items_count: 71,
-            linkedin_id: '',
-            location: '大阪',
-            name: '',
-            organization: '',
-            permanent_id: 787586,
-            profile_image_url:
-              'https://s3-ap-northeast-1.amazonaws.com/qiita-image-store/0/787586/3654a79ba5efa7ad8706a9bdac9572e9195c8b14/x_large.png?1678301445',
-            team_only: false,
-            twitter_screen_name: 'www_yto',
-            website_url: '',
-          },
-          page_views_count: null,
-          team_membership: null,
-          organization_url_name: null,
-        },
-      ]
-    },
+    ...qiitaResolver,
+    // qiitaItems: () => {
+    // return [
+    //   {
+    //     rendered_body: '',
+    //     body: '',
+    //     coediting: false,
+    //     comments_count: 0,
+    //     created_at: '2022-03-04T12:41:28+09:00',
+    //     group: null,
+    //     id: 'faafd093ac7e9bf0d510',
+    //     likes_count: 6,
+    //     private: false,
+    //     reactions_count: 0,
+    //     stocks_count: 6,
+    //     tags: [
+    //       {
+    //         name: 'Git',
+    //         versions: [],
+    //       },
+    //       {
+    //         name: 'GitHub',
+    //         versions: [],
+    //       },
+    //     ],
+    //     title: 'コミットのお作法',
+    //     updated_at: '2022-05-24T22:41:33+09:00',
+    //     url: 'https://qiita.com/www_y118/items/faafd093ac7e9bf0d510',
+    //     user: {
+    //       description: '感覚でやってます。\r\n',
+    //       facebook_id: '',
+    //       followees_count: 3,
+    //       followers_count: 3,
+    //       github_login_name: 'yuito118',
+    //       id: 'www_y118',
+    //       items_count: 71,
+    //       linkedin_id: '',
+    //       location: '大阪',
+    //       name: '',
+    //       organization: '',
+    //       permanent_id: 787586,
+    //       profile_image_url:
+    //         'https://s3-ap-northeast-1.amazonaws.com/qiita-image-store/0/787586/3654a79ba5efa7ad8706a9bdac9572e9195c8b14/x_large.png?1678301445',
+    //       team_only: false,
+    //       twitter_screen_name: 'www_yto',
+    //       website_url: '',
+    //     },
+    //     page_views_count: null,
+    //     team_membership: null,
+    //     organization_url_name: null,
+    //   },
+    // ]
+    // },
   }
 }
