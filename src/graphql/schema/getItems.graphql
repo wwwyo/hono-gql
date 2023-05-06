@@ -1,0 +1,13 @@
+query getItems {
+  qiitaItems {
+    id
+  }
+  zennItems {
+    scraps {
+      id
+    }
+    articles {
+      id
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { graphqlServer } from '@hono/graphql-server'
 import { Hono } from 'hono'
-import { schema, rootResolver } from './graphql/index'
+import { schema } from './graphql/schema/schema'
+import { rootResolver } from './graphql/resolver/resolver'
 
 export interface Env {
   // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
