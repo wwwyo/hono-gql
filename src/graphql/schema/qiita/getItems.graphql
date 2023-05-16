@@ -1,5 +1,0 @@
-query getItems {
-  qiitaItems {
-    id
-  }
-}
