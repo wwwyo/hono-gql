@@ -19,17 +19,6 @@ export interface Env {
 
 const app = new Hono()
 app.get('/', (c) => c.json({ ok: true, message: 'Hello Cloudflare Workers!' }))
-app.get('/test', async (c) => {
-  const res = await app.fetch(
-    new Request('http://127.0.0.1:8787/graphql', {
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
-      body: JSON.stringify({ query: 'query { qiitaItems {id} }' }),
-    })
-  )
-  const body = JSON.stringify(await res.json())
-  return c.text(body)
-})
 
 app.use(
   '/graphql',
