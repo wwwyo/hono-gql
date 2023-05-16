@@ -1,7 +1,10 @@
 import { RootResolver } from '@hono/graphql-server'
-import { qiitaResolver } from './qiita/qiitaResolver'
+import { qiitaResolvers } from './qiita/qiitaResolver'
+import { zennResolvers } from './zenn/zennResolver'
+import { QueryResolvers } from '@graphql/codegen/resolver'
 
-export const rootResolver: RootResolver = (ctx) => ({
-  ...qiitaResolver,
-  ...zenn,
-})
+const resolvers: QueryResolvers = {
+  ...qiitaResolvers,
+  ...zennResolvers,
+}
+export const rootResolver: RootResolver = (ctx) => resolvers
