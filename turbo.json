@@ -5,6 +5,10 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["public/build/**"]
+    },
+    "lint": {},
+    "deploy": {
+      "dependsOn": ["build", "lint"]
     }
   }
 }
