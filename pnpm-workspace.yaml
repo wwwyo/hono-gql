@@ -1,3 +1,4 @@
 packages:
   - 'frontend'
   - 'backend'
+  - 'my-remix-app'
