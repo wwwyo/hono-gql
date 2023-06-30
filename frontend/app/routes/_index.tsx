@@ -1,12 +1,12 @@
-import type { V2_MetaFunction } from "@remix-run/cloudflare";
-import { Logo } from "@/components/ui/Logo";
-import { Button } from "../components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Form } from "@remix-run/react";
+import type { V2_MetaFunction } from '@remix-run/cloudflare'
+import { Logo } from '@/components/ui/Logo'
+import { Button } from '../components/ui/Button'
+import { Input } from '@/components/ui/Input'
+import { Form } from '@remix-run/react'
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "New Remix App" }];
-};
+  return [{ title: 'New Remix App' }]
+}
 
 export default function Index() {
   return (
@@ -35,12 +35,12 @@ export default function Index() {
               >
                 Email
               </label>
-              <Input type="text" value={"aaaaa"} />
+              <Input type="text" value={'aaaaa'} />
             </Form>
           </div>
         </div>
       </main>
       <footer></footer>
     </>
-  );
+  )
 }
