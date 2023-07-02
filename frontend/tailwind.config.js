@@ -1,7 +1,7 @@
-import { type Config } from 'tailwindcss'
-
+/** @type {import('@remix-run/dev').AppConfig} */
 export default {
-  content: ['./app/**/*.{js,jsx,ts,tsx}'],
+  darkMode: ['class'],
+  content: ['./app/**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,
@@ -47,8 +47,8 @@ export default {
         },
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
@@ -66,6 +66,6 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
-    plugins: [],
   },
-} satisfies Config
+  plugins: [require('tailwindcss-animate')],
+}
