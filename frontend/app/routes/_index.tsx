@@ -27,8 +27,8 @@ export default function Index() {
             <span className="text-accent">BlogQL</span>
           </h1>
 
-          <div>
-            <Form method="post" action="/events">
+          <div className="mx-auto max-w-md">
+            <Form method="post" className="mx-auto" action="/events">
               <InputWithButton
                 id="qiita"
                 label="Qiita"
