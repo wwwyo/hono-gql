@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS Blogs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    blog_name TEXT NOT NULL,
+    user_id INTEGER NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME
+);
+
+INSERT INTO Blogs (blog_name, user_id) VALUES ('test', 1);
