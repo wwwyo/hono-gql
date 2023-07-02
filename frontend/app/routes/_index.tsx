@@ -1,8 +1,8 @@
 import type { V2_MetaFunction } from '@remix-run/cloudflare'
 import { Logo } from '@/components/ui/Logo'
 import { Button } from '../components/ui/Button'
-import { Input } from '@/components/ui/Input'
 import { Form } from '@remix-run/react'
+import { InputWithButton } from '../components/blog/InputWithButton'
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: 'New Remix App' }]
@@ -29,13 +29,11 @@ export default function Index() {
 
           <div>
             <Form method="post" action="/events">
-              <label
-                htmlFor="email2"
-                className="mb-2 text-sm font-bold leading-tight tracking-normal text-gray-800 dark:text-gray-100"
-              >
-                Email
-              </label>
-              <Input type="text" value={'aaaaa'} />
+              <InputWithButton
+                id="qiita"
+                label="Qiita"
+                placeholder="qiitaのユーザーID"
+              />
             </Form>
           </div>
         </div>
