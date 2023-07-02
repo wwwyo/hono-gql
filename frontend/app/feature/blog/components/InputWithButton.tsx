@@ -6,10 +6,20 @@ import { cn } from '@/lib/utils'
 type Props = {
   id: string
   label: string
+  name: string
   placeholder?: string
+  autoFocus?: boolean
+  tabIndex?: number
 }
 
-export function InputWithButton({ id, label, placeholder }: Props) {
+export function InputWithButton({
+  id,
+  label,
+  name,
+  placeholder,
+  autoFocus,
+  tabIndex,
+}: Props) {
   return (
     <Label htmlFor={id} size="lg">
       {label}
@@ -18,9 +28,12 @@ export function InputWithButton({ id, label, placeholder }: Props) {
       >
         <Input
           id={id}
+          name={name}
+          placeholder={placeholder}
+          autoFocus={autoFocus}
+          tabIndex={tabIndex}
           type="text"
           boxSize="lg"
-          placeholder={placeholder}
           className="col-span-4"
         />
         <Button
