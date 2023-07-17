@@ -16,16 +16,17 @@ const labelVariants = cva(
   }
 )
 
-export const Label = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
-    VariantProps<typeof labelVariants>
->(({ className, size, ...props }, ref) => (
-  <LabelPrimitive.Root
-    ref={ref}
-    className={cn(labelVariants({ size }), className)}
-    {...props}
-  />
-))
+export interface LabelProps
+  extends React.LabelHTMLAttributes<HTMLLabelElement>,
+    VariantProps<typeof labelVariants> {}
 
+export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
+  ({ className, size, ...props }, ref) => (
+    <LabelPrimitive.Root
+      ref={ref}
+      className={cn(labelVariants({ size }), className)}
+      {...props}
+    />
+  )
+)
 Label.displayName = LabelPrimitive.Root.displayName

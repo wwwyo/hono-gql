@@ -5,12 +5,13 @@
   "scripts": {
     "build": "remix build",
     "dev:remix": "remix watch",
-    "dev:wrangler": "cross-env NODE_ENV=development npm run wrangler --port 3000",
+    "dev:wrangler": "pnpm wrangler",
     "dev": "npm-run-all build --parallel \"dev:*\"",
     "start": "cross-env NODE_ENV=production npm run wrangler",
     "typecheck": "tsc",
-    "wrangler": "wrangler pages dev ./public",
-    "format": "prettier --write ./**/*.{tsx,ts}"
+    "wrangler": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+    "format": "prettier --write ./**/*.{tsx,ts}",
+    "deploy": "wrangler pages publish ./public"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.4",
@@ -39,8 +40,8 @@
     "@remix-run/dev": "^1.18.1",
     "@remix-run/eslint-config": "^1.18.1",
     "@types/better-sqlite3": "^7.6.4",
-    "@types/react": "^18.0.35",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "eslint": "^8.38.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
