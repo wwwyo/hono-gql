@@ -10,6 +10,7 @@
     "start": "cross-env NODE_ENV=production npm run wrangler",
     "typecheck": "tsc",
     "wrangler": "wrangler pages dev ./public",
+    "deploy": "",
     "format": "prettier --write ./**/*.{tsx,ts}"
   },
   "dependencies": {
@@ -54,6 +55,6 @@
     "node": ">=16.13"
   },
   "volta": {
-    "node": "18.15.0"
+    "node": "18.16.1"
   }
 }
